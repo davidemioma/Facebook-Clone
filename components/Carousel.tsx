@@ -13,6 +13,7 @@ const Carousel = ({ files }: Props) => {
     <div className="relative h-72 w-full bg-black">
       {files.map((file, i) => (
         <div
+          key={i}
           className={`${
             index === i
               ? "opacity-100 transition-opacity duration-1000"

@@ -33,7 +33,7 @@ const Box = ({ myAccount }: Props) => {
         </Link>
 
         <button className="flex-1 rounded-full bg-gray-100 py-1.5 px-4 text-left text-xs sm:text-sm">
-          What's on your mind
+          What&apos;s on your mind
           <span className="hidden capitalize sm:inline">
             , {myAccount?.firstname}
           </span>

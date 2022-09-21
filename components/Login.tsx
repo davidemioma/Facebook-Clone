@@ -145,7 +145,7 @@ const Login = () => {
             </h1>
 
             <p className="mb-3 text-center text-sm text-gray-500">
-              It's quick and easy
+              It&apos;s quick and easy
             </p>
 
             <form
