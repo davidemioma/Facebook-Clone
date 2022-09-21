@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-200;
+  }
+}
+
+@layer components {
+  .input {
+    @apply rounded border border-gray-300 bg-transparent py-2.5 px-4 outline-none;
+  }
+
+  .icon {
+    @apply flex h-5 w-5 items-center justify-center rounded-full text-white;
+  }
+
+  .input-container {
+    @apply flex flex-col space-y-2;
+  }
+
+  .err_text {
+    @apply p-1 text-[13px] font-light  text-red-500;
+  }
+
+  .profileBtn {
+    @apply flex w-full items-center space-x-2 rounded-lg py-2 px-3 hover:bg-gray-100;
+  }
+
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
+
+  .loader {
+    @apply h-7 w-7 animate-spin rounded-full border-t border-l border-white;
+  }
+
+  .controls {
+    @apply absolute top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 transition-transform duration-200 hover:scale-105;
+  }
+
+  .fileBtn {
+    @apply mx-auto flex h-8 w-8 items-center justify-center rounded-full bg-gray-100/80 py-1 transition-transform duration-300 hover:scale-105 hover:bg-gray-100 disabled:cursor-not-allowed;
+  }
+
+  .selectBtn {
+    @apply cursor-pointer py-4 px-8 hover:bg-gray-100;
+  }
+}
