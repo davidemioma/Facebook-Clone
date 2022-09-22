@@ -1,8 +1,11 @@
 import React from "react";
 import { HomeIcon } from "@heroicons/react/solid";
+import { LogoutIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 import SidebarBtn from "./SidebarBtn";
 import { User } from "../types";
+import { signOut } from "@firebase/auth";
+import { auth } from "../firebase";
 
 interface Props {
   myAccount: User | null;
@@ -44,6 +47,16 @@ const Sidebar = ({ myAccount }: Props) => {
           text="Friends"
           active={router.asPath === "/friends/requests"}
         />
+
+        <div className="sm:hidden">
+          <SidebarBtn
+            Icon={LogoutIcon}
+            href=""
+            text="Logout"
+            active={false}
+            onClick={() => signOut(auth)}
+          />
+        </div>
       </div>
     </div>
   );

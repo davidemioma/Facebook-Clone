@@ -8,9 +8,10 @@ interface Props {
   text: string;
   href: string;
   active: boolean;
+  onClick?: () => void;
 }
 
-const SidebarBtn = ({ Icon, imgSrc, text, href, active }: Props) => {
+const SidebarBtn = ({ Icon, imgSrc, text, href, active, onClick }: Props) => {
   const router = useRouter();
 
   const [showText, setShowText] = useState(false);
@@ -18,6 +19,7 @@ const SidebarBtn = ({ Icon, imgSrc, text, href, active }: Props) => {
   return (
     <Link href={href}>
       <div
+        onClick={onClick}
         className={`relative h-10 border-l-4 ${active && " border-blue-600"}`}
       >
         <div
