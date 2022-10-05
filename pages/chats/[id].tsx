@@ -165,7 +165,7 @@ const Chat = () => {
           <h1 className="text-lg font-bold">Chats</h1>
 
           {chats.length > 0 ? (
-            <div className="mt-2 h-[85vh] overflow-y-scroll scrollbar-hide">
+            <div className="mt-2 h-[85vh] space-y-2 overflow-y-scroll scrollbar-hide">
               {chats.map((chat) => (
                 <ChatRow key={chat.id} chat={chat} />
               ))}

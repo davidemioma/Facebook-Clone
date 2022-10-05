@@ -179,11 +179,13 @@ const Profile = () => {
                 <div className="flex items-center justify-between space-x-2">
                   <h2 className="text-lg font-bold">Friends</h2>
 
-                  <Link href="/friends/requests">
-                    <div className="cursor-pointer whitespace-nowrap rounded-lg px-3 py-1 text-blue-500 hover:bg-gray-100">
-                      Friend Requests
-                    </div>
-                  </Link>
+                  {profileAccount?.id === user?.uid && (
+                    <Link href="/friends/requests">
+                      <div className="cursor-pointer whitespace-nowrap rounded-lg px-3 py-1 text-blue-500 hover:bg-gray-100">
+                        Friend Requests
+                      </div>
+                    </Link>
+                  )}
                 </div>
 
                 <div className="h-60 overflow-x-hidden overflow-y-scroll scrollbar-hide">
